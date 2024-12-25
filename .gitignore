@@ -1,0 +1,69 @@
+# Node modules in the root and subfolders
+node_modules/
+*/node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids/
+*.pid
+*.pid.lock
+
+# Environment files
+.env
+*.env.local
+*.env.development
+*.env.production
+*.env.test
+
+# Dependency directories
+bower_components/
+jspm_packages/
+
+# Build and output directories
+dist/
+build/
+coverage/
+
+# System files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.temp
+
+# Operating system files
+*.bak
+*.orig
+
+# Ignoring files specific to subfolders
+server/orders/node_modules/
+server/users/node_modules/
+server/orders/*.log
+server/users/*.log
+
+# Ignore compiled and binary files
+*.o
+*.out
+*.class
+*.pyc
+*.pyo
+*.pyd
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Other IDE and editor files
+*.sublime-workspace
+*.sublime-project
