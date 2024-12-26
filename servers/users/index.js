@@ -51,14 +51,14 @@ app.post("/login", (req, res) => {
 
   // Generate JWT
   const token = jwt.sign({ email: validUser.email }, JWT_SECRET, {
-    expiresIn: "1h",
+    expiresIn: "24h",
   });
 
   res.json({ token });
 });
 
 // Create a new user (POST /users)
-app.post("/users", authenticate, (req, res) => {
+app.post("/users", (req, res) => {
   const { email, password } = req.body;
 
   if (!password || !email) {

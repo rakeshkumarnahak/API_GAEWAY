@@ -1,100 +1,82 @@
-route_map = [
+const route_map = [
   {
-    service: "user-service",
+    serviceName: "user-service",
     actions: {
-      action1: {
-        actionName: "get-user",
+      get_all_users: {
         httpMethod: "GET",
-        backendUrl: "http://localhost:3000/users/{id}",
+        backendUrl: "http://localhost:3100/users/",
         data: {
           headers: [],
           body: [],
-          params: [id],
+          params: [],
         },
       },
-      action2: {
-        actionName: "post-user",
+      get_user: {
+        httpMethod: "GET",
+        backendUrl: "http://localhost:3100/users/id",
+        data: {
+          headers: ["Authorization"],
+          body: [],
+          params: ["id"],
+        },
+      },
+      user_login: {
         httpMethod: "POST",
-        backendUrl: "http://localhost:3000/users",
+        backendUrl: "http://localhost:3100/login",
         data: {
           headers: [],
-          body: [firstName, lastName, email, password],
-          params: [id],
+          body: ["email", "password"],
+          params: [],
         },
       },
-      action3: {
-        actionName: "update-user",
+      user_signin: {
+        httpMethod: "POST",
+        backendUrl: "http://localhost:3100/users/",
+        data: {
+          headers: [],
+          body: ["email", "password"],
+          params: [],
+        },
+      },
+      user_update: {
         httpMethod: "PUT",
-        backendUrl: "http://localhost:3000/users/{id}",
+        backendUrl: "http://localhost:3100/users/id",
         data: {
-          headers: [],
-          body: [firstName, lastName],
-          params: [id],
-        },
-      },
-      action4: {
-        actionName: "delete-user",
-        httpMethod: "DELETE",
-        backendUrl: "http://localhost:3000/users/{id}",
-        data: {
-          headers: [],
-          body: [],
-          params: [id],
+          headers: ["Authorization"],
+          body: ["email", "password"],
+          params: ["id"],
         },
       },
     },
   },
   {
-    service: "order-service",
+    serviceName: "order-service",
     actions: {
-      action1: {
-        actionName: "get-orders",
-        httpMethod: "GET",
-        backendUrl: "http://localhost:3001/orders",
+      post_order: {
+        httpMethod: "POST",
+        backendUrl: "http://localhost:3200/orders",
         data: {
-          headers: [accessToken],
+          headers: [],
+          body: ["product", "quantity", "totalPrice"],
+          params: [],
+        },
+      },
+      get_all_orders: {
+        httpMethod: "GET",
+        backendUrl: "http://localhost:3200/orders",
+        data: {
+          headers: [],
           body: [],
           params: [],
         },
       },
-      action1: {
-        actionName: "get-order",
+      get_order: {
         httpMethod: "GET",
-        backendUrl: "http://localhost:3001/orders/{id}",
+        backendUrl: "http://localhost:3200/orders/id",
         data: {
           headers: [],
           body: [],
-          params: [id],
-        },
-      },
-      action2: {
-        actionName: "post-order",
-        httpMethod: "POST",
-        backendUrl: "http://localhost:3001/orders/",
-        data: {
-          headers: [accessToken],
-          body: [foodId, address],
-          params: [id],
-        },
-      },
-      action3: {
-        actionName: "update-order",
-        httpMethod: "PUT",
-        backendUrl: "http://localhost:3001/orders/{id}",
-        data: {
-          headers: [accessToken],
-          body: [address, foodId],
-          params: [id],
-        },
-      },
-      action4: {
-        actionName: "delete-user",
-        httpMethod: "DELETE",
-        backendUrl: "http://localhost:3001/orders/{id}",
-        data: {
-          headers: [accessToken],
-          body: [],
-          params: [id],
+          params: ["id"],
         },
       },
     },

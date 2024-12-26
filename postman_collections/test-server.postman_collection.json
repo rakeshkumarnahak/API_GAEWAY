@@ -19,13 +19,13 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwiaWF0IjoxNzM1MTI3MDA0LCJleHAiOjE3MzUxMzA2MDR9.Mo0VIBMLx0wPZr_idRf6PUd5HE2yfcUoz88d-EE55uY",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwiaWF0IjoxNzM1MTgyMTg4LCJleHAiOjE3MzUxODU3ODh9.pa1t9QRF6gpyHDEo5OPZONRVhvOlrb1VK14mH8LAD4M",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"rakesh2-update@example.com\"\r\n}",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -33,7 +33,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3100/users/101c2d80-9df6-54df-9e08-2f9f508184bb",
+							"raw": "http://localhost:3100/users/cdbca65a-f4cc-5fe8-a014-f10d6b9c3ab9",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -41,7 +41,7 @@
 							"port": "3100",
 							"path": [
 								"users",
-								"101c2d80-9df6-54df-9e08-2f9f508184bb"
+								"cdbca65a-f4cc-5fe8-a014-f10d6b9c3ab9"
 							]
 						}
 					},
@@ -57,7 +57,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"admin@example.com\",\r\n    \"password\": \"admin123\"\r\n}",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -110,16 +110,10 @@
 					"name": "user-signin_users",
 					"request": {
 						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwiaWF0IjoxNzM1MTI3MDA0LCJleHAiOjE3MzUxMzA2MDR9.Mo0VIBMLx0wPZr_idRf6PUd5HE2yfcUoz88d-EE55uY",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"rakesh2@example.com\",\r\n    \"password\": \"admin123\"\r\n}",
+							"raw": "{\r\n    \"email\": \"rakesh3@example.com\",\r\n    \"password\": \"admin123\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -147,13 +141,13 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwiaWF0IjoxNzM1MTI3MDA0LCJleHAiOjE3MzUxMzA2MDR9.Mo0VIBMLx0wPZr_idRf6PUd5HE2yfcUoz88d-EE55uY",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwiaWF0IjoxNzM1MTgyMTg4LCJleHAiOjE3MzUxODU3ODh9.pa1t9QRF6gpyHDEo5OPZONRVhvOlrb1VK14mH8LAD4M",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"rakesh2-update@example.com\"\r\n}",
+							"raw": "{\r\n    \"email\": \"rakesh3-update@example.com\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -161,7 +155,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3100/users/44369569-5364-57be-bbb2-d8cfd55c2830",
+							"raw": "http://localhost:3100/users/cdbca65a-f4cc-5fe8-a014-f10d6b9c3ab9",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -169,7 +163,7 @@
 							"port": "3100",
 							"path": [
 								"users",
-								"44369569-5364-57be-bbb2-d8cfd55c2830"
+								"cdbca65a-f4cc-5fe8-a014-f10d6b9c3ab9"
 							]
 						}
 					},
@@ -182,15 +176,12 @@
 			"item": [
 				{
 					"name": "post-order_orders",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
 					"request": {
-						"method": "GET",
+						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"product\": \"Coke\",\r\n    \"quantity\": 2,\r\n    \"totalPrice\": 200\r\n}",
+							"raw": "{\r\n    \"product\": \"thumsup\",\r\n    \"quantity\": 2,\r\n    \"totalPrice\": 200\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
